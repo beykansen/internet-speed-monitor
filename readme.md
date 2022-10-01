@@ -7,7 +7,7 @@ This app uses ``Speedtest CLI`` to monitor your internet speed within desired in
 and expose them as prometheus metrics and callback your desired endpoint with results after each run.
 
 ### Prerequisites:
-If your plan is using the binary, ``Speedtest CLI`` needs to be installed on your machine. Click [here]((https://www.speedtest.net/tr/apps/cli)) to install SPEEDTEST® CLI.
+If your plan is using the binary, ``Speedtest CLI`` needs to be installed on your machine. Click [here](https://www.speedtest.net/tr/apps/cli) to install SPEEDTEST® CLI.
 
 
 ### How to use:
