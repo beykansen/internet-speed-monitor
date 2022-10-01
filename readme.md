@@ -1,12 +1,12 @@
 # Internet Speed Monitor
-[![build_and_push](https://github.com/beykansen/internet-speed-monitor/actions/workflows/build_and_push.yml/badge.svg)](https://github.com/beykansen/internet-speed-monitor/actions/workflows/build_and_push.yml)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/beykansen/internet-speed-monitor/build_and_push)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beykansen/internet-speed-monitor)
 ![GitHub all releases](https://img.shields.io/github/downloads/beykansen/internet-speed-monitor/total)
 
 This app uses ``Speedtest CLI`` to monitor your internet speed within desired interval 
 and expose them as prometheus metrics and callback your desired endpoint with results after each run.
 
-### Prerequisites
+### Prerequisites:
 If your plan is using the binary, ``Speedtest CLI`` needs to be installed on your machine. Click [here]((https://www.speedtest.net/tr/apps/cli)) to install SPEEDTEST® CLI.
 
 
@@ -26,7 +26,7 @@ docker run -d \
   ghcr.io/beykansen/internet-speed-monitor:latest
 ```
 
-#### Callback Details:
+### Callback Details:
 Method: ``POST`` <br />
 Example payload:
 ```json
@@ -37,3 +37,6 @@ Example payload:
   "latency": 7
 }
 ```
+
+### Grafana Dashboard:
+[Internet Speed Monitor Dashboard](https://grafana.com/grafana/dashboards/17105)
