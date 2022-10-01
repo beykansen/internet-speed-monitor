@@ -1,7 +1,7 @@
 # Internet Speed Monitor
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/beykansen/internet-speed-monitor/build_and_push)
+[![CodeQL](https://github.com/beykansen/internet-speed-monitor/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/beykansen/internet-speed-monitor/actions/workflows/codeql-analysis.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beykansen/internet-speed-monitor)
-![GitHub all releases](https://img.shields.io/github/downloads/beykansen/internet-speed-monitor/total)
 
 This app uses ``Speedtest CLI`` to monitor your internet speed within desired interval 
 and expose them as prometheus metrics and callback your desired endpoint with results after each run.
