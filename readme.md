@@ -1,4 +1,4 @@
-# Internet Speed Monitor+
+# Internet Speed Monitor
 [![build_and_push](https://github.com/beykansen/internet-speed-monitor/actions/workflows/build_and_push.yml/badge.svg)](https://github.com/beykansen/internet-speed-monitor/actions/workflows/build_and_push.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/beykansen/internet-speed-monitor)
 ![GitHub all releases](https://img.shields.io/github/downloads/beykansen/internet-speed-monitor/total)
