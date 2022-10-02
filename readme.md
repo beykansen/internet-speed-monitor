@@ -15,6 +15,10 @@ Download binary from releases and run:
 ```bash
 ./internet-speed-monitor --interval 15 --port 8080 --callback https://example.com/callback
 ```
+or via ``go install``
+```bash
+go install github.com/beykansen/internet-speed-monitor@latest
+```
 or via docker:
 ```bash
 docker run -d \
