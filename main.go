@@ -64,8 +64,7 @@ func main() {
 }
 
 func collectMetrics() {
-	for {
-		rand.Seed(time.Now().UnixNano())
+	iteration := func() {
 		if result, err := runSpeedTest(); err != nil {
 			atomic.AddUint64(&errorCount, 1)
 			if errorCount > fatalErrorCountThreshold {
@@ -78,12 +77,14 @@ func collectMetrics() {
 			jitter.WithLabelValues(hostname).Set(result.Jitter)
 			latency.WithLabelValues(hostname).Set(result.Latency)
 
-			if len(strings.TrimSpace(args.CallbackUrl)) > 0 {
-				if err := pkg.Callback(args.CallbackUrl, result); err != nil {
-					log.Printf("Got error while callback %s\n", err.Error())
-				}
+			if err := pkg.Callback(args.CallbackUrl, result); err != nil {
+				log.Printf("Got error while callback %s\n", err.Error())
 			}
 		}
+	}
+	for {
+		iteration()
+		rand.Seed(time.Now().UnixNano())
 		time.Sleep(time.Duration(args.Interval)*time.Minute + time.Duration(rand.Intn(120))*time.Second)
 	}
 }
