@@ -39,4 +39,6 @@ Example payload:
 ```
 
 ### Grafana Dashboard:
+<img width="2484" alt="dashboard" src="https://user-images.githubusercontent.com/7861440/193432808-25db9811-c0cc-4916-bdb9-e49b1fb1686f.png">
+
 [Internet Speed Monitor Dashboard](https://grafana.com/grafana/dashboards/17105)
