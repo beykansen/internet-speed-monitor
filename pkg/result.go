@@ -2,7 +2,6 @@ package pkg
 
 import (
 	"encoding/json"
-	"time"
 )
 
 type Result struct {
@@ -13,58 +12,16 @@ type Result struct {
 }
 
 type RawResult struct {
-	Type      string    `json:"type"`
-	Timestamp time.Time `json:"timestamp"`
-	Ping      struct {
+	Ping struct {
 		Jitter  float64 `json:"jitter"`
 		Latency float64 `json:"latency"`
-		Low     float64 `json:"low"`
-		High    float64 `json:"high"`
 	} `json:"ping"`
 	Download struct {
 		Bandwidth int `json:"bandwidth"`
-		Bytes     int `json:"bytes"`
-		Elapsed   int `json:"elapsed"`
-		Latency   struct {
-			Iqm    float64 `json:"iqm"`
-			Low    float64 `json:"low"`
-			High   float64 `json:"high"`
-			Jitter float64 `json:"jitter"`
-		} `json:"latency"`
 	} `json:"download"`
 	Upload struct {
 		Bandwidth int `json:"bandwidth"`
-		Bytes     int `json:"bytes"`
-		Elapsed   int `json:"elapsed"`
-		Latency   struct {
-			Iqm    float64 `json:"iqm"`
-			Low    float64 `json:"low"`
-			High   float64 `json:"high"`
-			Jitter float64 `json:"jitter"`
-		} `json:"latency"`
 	} `json:"upload"`
-	Isp       string `json:"isp"`
-	Interface struct {
-		InternalIp string `json:"internalIp"`
-		Name       string `json:"name"`
-		MacAddr    string `json:"macAddr"`
-		IsVpn      bool   `json:"isVpn"`
-		ExternalIp string `json:"externalIp"`
-	} `json:"interface"`
-	Server struct {
-		Id       int    `json:"id"`
-		Host     string `json:"host"`
-		Port     int    `json:"port"`
-		Name     string `json:"name"`
-		Location string `json:"location"`
-		Country  string `json:"country"`
-		Ip       string `json:"ip"`
-	} `json:"server"`
-	Result struct {
-		Id        string `json:"id"`
-		Url       string `json:"url"`
-		Persisted bool   `json:"persisted"`
-	} `json:"result"`
 }
 
 func FromBytesToResult(data []byte) (*Result, error) {
